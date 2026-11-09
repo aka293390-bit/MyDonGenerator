@@ -1,4 +1,4 @@
-import initWasm,{dependencies,parse_model} from './pkg/mydon_ssbh_wasm.js';
+import initWasm,{dependencies,parse_model} from './mydon_ssbh_wasm.js';
 let wasmReady;
 export async function prepareNiji(){if(!wasmReady)wasmReady=initWasm();await wasmReady}
 const norm=p=>{const out=[];for(const s of p.replaceAll('\\','/').split('/')){if(!s||s==='.')continue;if(s==='..')out.pop();else out.push(s)}return out.join('/')};
